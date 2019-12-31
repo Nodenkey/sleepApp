@@ -35,10 +35,7 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Widget build(BuildContext context) {
-    var screenWidth = MediaQuery
-        .of(context)
-        .size
-        .width;
+    var screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,

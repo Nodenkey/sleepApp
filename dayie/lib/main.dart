@@ -49,7 +49,7 @@ class OnBoarding extends StatelessWidget {
             height: 70,
           ),
           Text(
-            'Your assurance to a good sleep',
+            'Your sleep companion',
             style: GoogleFonts.alata(
               textStyle: TextStyle(
                 color: Colors.white,

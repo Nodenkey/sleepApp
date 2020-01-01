@@ -42,6 +42,7 @@ class _MainScreenState extends State<MainScreen> {
   int _current3 = 0;
   // use to stop timer
   int stopTimer = 0;
+  int reload = 0;
 
   void startTimer() {
     void timer1() {
@@ -106,7 +107,9 @@ class _MainScreenState extends State<MainScreen> {
       }
     }
 
-    if (_current2 <= 1) {
+    if (_current2 < 1) {
+      return;
+    } else {
       timer2();
     }
 
@@ -140,6 +143,8 @@ class _MainScreenState extends State<MainScreen> {
   bool onPressed() {
     if (!_formKey.currentState.validate()) {
       print('fields cannot be empty');
+      return false;
+    } else if (reload == 1) {
       return false;
     } else {
       setState(() {
@@ -503,8 +508,10 @@ class _MainScreenState extends State<MainScreen> {
                               onPressed: () {
                                 setState(() {
                                   stopTimer = 1;
+                                  reload = 1;
                                   startTimer();
                                   stopTimer = 0;
+                                  reload = 0;
                                   hours = 0;
                                   mins = 0;
                                   _start3 = 0;

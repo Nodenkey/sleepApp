@@ -27,6 +27,7 @@ class OnBoarding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.redAccent,
         elevation: 0,
         title: Text(
